@@ -36,4 +36,4 @@ Repo này dùng để **lưu trữ toàn bộ bài tập thực hành, tài li�
 - Thời gian hoàn thành: … phút
 
 📸 Ảnh kết quả minh chứng:  
-[Click để xem ảnh kết quả Tuần 1](week-01/Ketqua.png)
+[Click để xem ảnh kết quả Tuần 1](week-01/Kết quả.png)
