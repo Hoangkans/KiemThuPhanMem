@@ -1,102 +1,110 @@
-# Bài tập thực hành kiểm thử với JUnit
+# StudentAnalyzer - Unit Testing with JUnit 5
 
-## Chủ đề: Phân tích dữ liệu điểm số học sinh
+Bài tập thực hành kiểm thử đơn vị - Phân tích dữ liệu điểm số học sinh
 
 ---
 
-## 1. Mục tiêu học tập
+## 📋 Mục tiêu học tập
 
 - Làm quen với kiểm thử đơn vị (Unit Test) bằng JUnit 5
 - Biết cách viết test case cho các phương thức Java
 - Thực hành validate dữ liệu và xử lý các trường hợp biên
 - Biết cách chạy kiểm thử bằng Maven
-- Làm quen với quy trình làm việc với GitHub (commit, issue)
+- Làm quen với quy trình làm việc với Git/GitHub
 
 ---
 
-## 2. Mô tả bài toán
+## 🎯 Mô tả bài toán
 
-Xây dựng một chương trình Java dùng để phân tích điểm số học sinh (từ 0 đến 10), bao gồm:
+Xây dựng chương trình Java để phân tích điểm số học sinh (giá trị từ 0 đến 10), có các chức năng:
 
-- Đếm số lượng học sinh đạt loại **Giỏi** (điểm ≥ 8.0)
+- Đếm số học sinh đạt loại **Giỏi** (điểm ≥ 8.0)
 - Tính **điểm trung bình** của các điểm hợp lệ
-- Bỏ qua các giá trị điểm không hợp lệ (nhỏ hơn 0 hoặc lớn hơn 10)
-- Nếu danh sách rỗng hoặc không có điểm hợp lệ thì trả về 0
+- Bỏ qua các giá trị không hợp lệ (< 0 hoặc > 10)
+- Trả về 0 nếu danh sách rỗng hoặc không có điểm hợp lệ
 
 ---
 
-## 3. Công nghệ sử dụng
+## 🛠️ Công nghệ sử dụng
 
-- Ngôn ngữ: Java
-- Kiểm thử: JUnit 5
-- Công cụ build: Maven
-- IDE: Visual Studio Code
+| Công cụ | Phiên bản/Chi tiết |
+|---------|-------------------|
+| Ngôn ngữ | Java 8+ |
+| Framework kiểm thử | JUnit 5 |
+| Công cụ build | Maven |
+| IDE | Visual Studio Code |
 
 ---
 
-## 4. Cấu trúc thư mục
+## 📁 Cấu trúc dự án
 
-student-analyzer
-│
+```
+student-analyzer/
 ├── pom.xml
-│
-├── src
-│ ├── main
-│ │ └── java
-│ │ └── com
-│ │ └── example
-│ │ └── StudentAnalyzer.java
-│ │
-│ └── test
-│ └── java
-│ └── com
-│ └── example
-│ └── StudentAnalyzerTest.java
-│
-└── README.md
+├── README.md
+└── src/
+    ├── main/java/com/example/
+    │   ├── StudentAnalyzer.java      (lớp chính)
+    │   └── Main.java                 (class main)
+    └── test/java/com/example/
+        └── StudentAnalyzerTest.java  (test cases)
+```
 
 ---
 
-## 5. Mô tả các lớp
+## 📝 Mô tả các lớp
 
-### 5.1. Lớp StudentAnalyzer
+### StudentAnalyzer.java
 
-Chứa các phương thức xử lý nghiệp vụ:
+Lớp chứa logic xử lý dữ liệu điểm số:
 
-- `countExcellentStudents(List<Double> scores)`  
-  Đếm số học sinh có điểm ≥ 8.0 (chỉ tính các điểm hợp lệ).
+| Phương thức | Mô tả |
+|-----------|------|
+| `countExcellentStudents(List<Double> scores)` | Đếm số học sinh có điểm ≥ 8.0 (chỉ tính điểm hợp lệ) |
+| `calculateValidAverage(List<Double> scores)` | Tính trung bình cộng của các điểm hợp lệ |
 
-- `calculateValidAverage(List<Double> scores)`  
-  Tính điểm trung bình của các điểm hợp lệ trong danh sách.
+### StudentAnalyzerTest.java
 
----
+Lớp chứa các ca kiểm thử đơn vị cho `StudentAnalyzer`:
 
-### 5.2. Lớp StudentAnalyzerTest
-
-Chứa các ca kiểm thử đơn vị cho lớp `StudentAnalyzer` bằng JUnit 5.
-
-Các nhóm test case:
-
-- Trường hợp bình thường (có cả điểm hợp lệ và không hợp lệ)
-- Trường hợp danh sách rỗng
-- Trường hợp giá trị biên (0, 10)
-- Trường hợp toàn bộ dữ liệu không hợp lệ
+- **Trường hợp bình thường**: Danh sách có cả điểm hợp lệ và không hợp lệ
+- **Trường hợp biên**: Giá trị 0, 10 (ranh giới)
+- **Trường hợp đặc biệt**: Danh sách rỗng, toàn bộ điểm không hợp lệ
 
 ---
 
-## 6. Cách chạy chương trình và kiểm thử
+## 🚀 Hướng dẫn chạy
 
-### 6.1. Chạy kiểm thử bằng Maven
+### Chạy toàn bộ kiểm thử
 
-Mở terminal tại thư mục gốc của project (nơi chứa file `pom.xml`) và chạy:
+Mở terminal tại thư mục gốc (chứa `pom.xml`) và thực hiện:
 
-## bash: `mvn clean test`
+```bash
+mvn clean test
+```
 
-### 6.2. Kết quả mong đợi
+### Kết quả mong đợi
 
-Maven build thành công
-Các test case đều pass
-Hiển thị thông báo: `BUILD SUCCESS`
+- ✅ Maven build thành công
+- ✅ Tất cả test case đều pass
+- ✅ Hiển thị: `BUILD SUCCESS`
+- ✅ Báo cáo test trong thư mục: `target/surefire-reports/`
+
+---
+
+## 📊 Kết quả kiểm thử
+
+Sau khi chạy `mvn test`, kiểm tra file báo cáo:
+
+- `target/surefire-reports/TEST-com.example.StudentAnalyzerTest.xml`
+
+---
+
+## 👨‍💻 Tác giả
+
+- Sinh viên: [Tên của bạn]
+- Lớp: [Tên lớp]
+- Ngày: 2026
 
 ## 7. Kết quả kiểm thử
 
