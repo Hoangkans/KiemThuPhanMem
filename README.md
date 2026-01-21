@@ -40,6 +40,14 @@ KiemThuPhanMem/
 │   │   ├── README.md
 │   │   └── src/
 │   └── ...
+├── week-03/                    # (Được lưu bên ngoài folder này)
+│   └── cypress-exercise/      # Dự án Cypress E2E Testing
+│       ├── cypress/
+│       │   ├── e2e/          # Test specifications
+│       │   └── support/       # Support files
+│       ├── cypress.config.js
+│       ├── package.json
+│       └── README.md
 └── README.md                   # File này
 ```
 
@@ -81,6 +89,39 @@ KiemThuPhanMem/
 ➡️ [Xem tại thư mục week-02/student-analyzer](week-02/student-analyzer)
 
 ---
+
+### 🗓️ Tuần 3: End-to-End Testing với Cypress
+
+**Nội dung:** Kiểm thử tự động E2E cho trang web SauceDemo
+
+**Công nghệ:** Cypress, Node.js, JavaScript
+
+**Loại kiểm thử:** End-to-End Testing (Kiểm thử đầu cuối)
+
+**Website được test:** [SauceDemo](https://www.saucedemo.com)
+
+**Kết quả:**
+
+- ✅ Tổng số test specs: **3 files**
+- ✅ Tổng số test cases: **6 tests**
+- ✅ Kết quả: **Tất cả PASS (100%)**
+
+**Các test scenarios đã thực hiện:**
+
+1. **Kiểm thử Đăng nhập** (2 tests)
+   - ✅ Đăng nhập thành công với thông tin hợp lệ
+   - ✅ Hiển thị thông báo lỗi với thông tin không hợp lệ
+
+2. **Kiểm thử Giỏ hàng** (3 tests)
+   - ✅ Thêm sản phẩm vào giỏ hàng
+   - ✅ Sắp xếp sản phẩm theo giá
+   - ✅ Xóa sản phẩm khỏi giỏ hàng
+
+3. **Kiểm thử Thanh toán** (1 test)
+   - ✅ Hoàn thành quy trình thanh toán đầy đủ
+
+**📁 Chi tiết bài thực hành:**  
+➡️ [Xem tại thư mục cypress-exercise](../cypress-exercise)
 
 ## 📌 Ghi chú
 
