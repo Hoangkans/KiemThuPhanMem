@@ -41,7 +41,7 @@ KiemThuPhanMem/
 │   │   └── src/
 │   └── ...
 ├── week-03/                    # (Được lưu bên ngoài folder này)
-│   └── cypress-exercise/      # Dự án Cypress E2E Testing
+│   └── automation_test/cypress-exercise/      # Dự án Cypress E2E Testing
 │       ├── cypress/
 │       │   ├── e2e/          # Test specifications
 │       │   └── support/       # Support files
