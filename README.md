@@ -41,13 +41,21 @@ KiemThuPhanMem/
 │   │   └── src/
 │   └── ...
 ├── week-03/                    # (Được lưu bên ngoài folder này)
-│   └── automation_test/cypress-exercise/      # Dự án Cypress E2E Testing
+│   └── cypress-exercise/      # Dự án Cypress E2E Testing
 │       ├── cypress/
 │       │   ├── e2e/          # Test specifications
 │       │   └── support/       # Support files
 │       ├── cypress.config.js
 │       ├── package.json
 │       └── README.md
+├── automation_test/            # Thư mục automation testing
+│   └── jmeter/                # Bài thực hành tuần 4 - Performance Testing
+│       ├── README.md          # Báo cáo kết quả kiểm thử
+│       ├── SETUP_GUIDE.md     # Hướng dẫn cài đặt JMeter
+│       ├── test-scenarios.md  # Chi tiết kịch bản kiểm thử
+│       ├── test-plan-template.md  # Template Test Plan
+│       ├── performance-test.jmx   # JMeter Test Plan file (tạo sau)
+│       └── results/           # Kết quả kiểm thử (CSV, screenshots)
 └── README.md                   # File này
 ```
 
@@ -122,6 +130,46 @@ KiemThuPhanMem/
 
 **📁 Chi tiết bài thực hành:**  
 ➡️ [Xem tại thư mục cypress-exercise](../cypress-exercise)
+
+---
+
+### 🗓️ Tuần 4: Performance Testing với JMeter
+
+**Nội dung:** Kiểm thử hiệu năng trang web với Apache JMeter
+
+**Công nghệ:** Apache JMeter, Java
+
+**Loại kiểm thử:** Performance Testing (Kiểm thử hiệu năng)
+
+**Mục tiêu:**
+
+- Hiểu cách sử dụng JMeter để thực hiện kiểm thử hiệu năng
+- Thiết kế kịch bản kiểm thử với các tham số khác nhau
+- Phân tích kết quả kiểm thử và viết báo cáo
+
+**Kịch bản kiểm thử:**
+
+1. **Thread Group 1: Kịch bản cơ bản**
+   - 10 users, 5 loops
+   - Test trang chủ với tải nhẹ
+
+2. **Thread Group 2: Kịch bản tải nặng**
+   - 50 users, 30s ramp-up
+   - Test trang chủ + subpage với tải cao
+
+3. **Thread Group 3: Kịch bản tùy chỉnh**
+   - 20 users, 60s duration
+   - Test POST/GET requests với sustained load
+
+**📁 Chi tiết bài thực hành:**  
+➡️ [Xem tại thư mục automation_test/jmeter](automation_test/jmeter)
+
+**📖 Tài liệu hướng dẫn:**
+
+- [SETUP_GUIDE.md](automation_test/jmeter/SETUP_GUIDE.md) - Hướng dẫn cài đặt và cấu hình JMeter
+- [test-scenarios.md](automation_test/jmeter/test-scenarios.md) - Chi tiết các kịch bản kiểm thử
+
+---
 
 ## 📌 Ghi chú
 
