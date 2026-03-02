@@ -1,4 +1,4 @@
-# JMeter Performance Testing - Hướng Dẫn Đầy Đủ
+# JMeter Performance Testing
 
 ## 📋 Mục Lục
 
