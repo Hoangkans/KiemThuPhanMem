@@ -102,8 +102,8 @@ Sau khi chạy `mvn test`, kiểm tra file báo cáo:
 
 ## 👨‍💻 Tác giả
 
-- Sinh viên: [Tên của bạn]
-- Lớp: [Tên lớp]
+- Sinh viên: Hoàng Minh Thiện _ BIT230390
+- Lớp: 23IT2
 - Ngày: 2026
 
 ## 7. Kết quả kiểm thử
